@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:keepScreenOn="true" >
+
+<!--    <TextView
+        android:id="@+id/textField"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="This is a simple two button app. \r\n \r\n Tell your user what your app does here \r\n \r\n \r\n \r\n"
+        android:textColor="#FFFFFF" /> --> 
+    
+	<ImageView
+	    android:id="@+id/chronoImage"
+	    android:padding="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/stopwatchsmall" />
+    
+    <TextView
+        android:id="@+id/distance"
+        android:padding="10dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chronoImage"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/chronometer"
+        android:text="DISTANCE: "
+        android:textSize="20sp"
+        android:textColor="#FFFFFF" />
+    
+    <TextView
+        android:id="@+id/distanceAmount"
+        android:padding="10dp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chronoImage"
+        android:layout_alignParentRight="true"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF" />
+    
+    <TextView
+        android:id="@+id/average"
+        android:padding="10dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/distance"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/chronometer"
+        android:text="AVG SPEED: "
+        android:textSize="20sp"
+        android:textColor="#FFFFFF" />
+    
+    <TextView
+        android:id="@+id/averageSpeed"
+        android:padding="10dp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/distance"
+        android:layout_alignParentRight="true"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF" />
+    
+    <TextView
+        android:id="@+id/time"
+        android:padding="10dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/average"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/chronometer"
+        android:text="TIME: "
+        android:textSize="20sp"
+        android:textColor="#FFFFFF" />
+    
+    <Chronometer
+        android:id="@+id/chronometer"
+        android:visibility="visible"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/average"
+        android:layout_alignParentRight="true"
+        android:textSize="20sp"
+        android:typeface="monospace"
+        android:padding="10dp" />
+	
+	<Button
+        android:id="@+id/buttonStart"
+        android:visibility="visible"
+        android:layout_width="0dp"
+        android:layout_below="@id/chronometer"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/buttonStop"
+        android:layout_height="wrap_content"
+        android:text="Start" />
+	
+	<Button
+        android:id="@+id/buttonPause"
+        android:visibility="invisible"
+        android:layout_width="0dp"
+        android:layout_below="@id/chronometer"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/buttonStop"
+        android:layout_height="wrap_content"
+        android:text="Pause" />
+	
+	<Button
+        android:id="@+id/buttonResume"
+        android:visibility="invisible"
+        android:layout_width="0dp"
+        android:layout_below="@id/chronometer"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/buttonStop"
+        android:layout_height="wrap_content"
+        android:text="Resume" />
+
+    <Button
+        android:id="@+id/buttonStop"
+        android:visibility="visible"
+        android:layout_width="150dp"
+        android:layout_below="@id/chronometer"
+        android:layout_alignParentRight="true"
+        android:layout_height="wrap_content"
+        android:text="Stop" />
+    
+    <Button
+        android:id="@+id/buttonEnd"
+        android:visibility="invisible"
+        android:layout_width="150dp"
+        android:layout_below="@id/chronometer"
+        android:layout_alignParentRight="true"
+        android:layout_height="wrap_content"
+        android:text="End" />
+    
+    <EditText
+        android:visibility="invisible"
+        android:id="@+id/editText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chronometer"
+        android:hint="Type the name of the trail."
+        android:singleLine="true" >
+
+        <requestFocus />
+    </EditText>
+    
+    <Button
+        android:id="@+id/buttonSave"
+        android:visibility="invisible"
+        android:layout_width="150dp"
+        android:layout_below="@id/editText"
+        android:layout_alignParentRight="true"
+        android:layout_height="wrap_content"
+        android:text="Save" />
+    
+    <Button
+        android:id="@+id/buttonCancel"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/editText"
+        android:layout_height="wrap_content"
+        android:text="    Cancel    " />
+  
+    
+	<Button
+        android:id="@+id/backToMainpage"
+        android:visibility="visible"
+        android:layout_width="250dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        android:text="Back to the mainpage" />
+
+</RelativeLayout>

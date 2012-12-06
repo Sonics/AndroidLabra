@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:keepScreenOn="true" >
+
+    <com.google.android.maps.MapView
+        android:id="@+id/mapview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/backButton"
+        android:layout_alignParentTop="true"
+        android:apiKey="082zAzn08Ezl82dXJlYQnsH57RUVFuvA-xL7AdA"
+        android:clickable="true" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Back to previous" />
+
+</RelativeLayout>

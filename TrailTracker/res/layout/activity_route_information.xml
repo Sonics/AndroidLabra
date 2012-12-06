@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:keepScreenOn="true" >
+    
+    <TextView 
+        android:id="@+id/routeDate"
+        android:paddingBottom="7dp"
+        android:paddingLeft="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date: "
+        android:textSize="13sp"
+        android:textColor="#FFFFFF"  />
+    
+    <TextView 
+        android:id="@+id/thisRouteDate"
+        android:paddingBottom="7dp"
+        android:paddingRight="7dp"
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@id/routeDate"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:textColor="#FFFFFF"  />
+    
+    
+    <TextView 
+        android:id="@+id/thisRouteName"
+        android:paddingBottom="7dp"
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@id/thisRouteDate"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:textColor="#FFFFFF"  />
+    
+    <TextView
+        android:id="@+id/routeTime"
+        android:paddingBottom="7dp"
+        android:paddingLeft="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/routeDate"
+        android:text="Time: "
+        android:textSize="11sp"
+        android:textColor="#FFFFFF" />
+    
+    <TextView
+        android:id="@+id/thisRouteTime"
+        android:paddingBottom="7dp"
+        android:paddingRight="7dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/thisRouteName"
+        android:layout_toRightOf="@id/routeTime"
+        android:textSize="11sp"
+        android:textColor="#FFFFFF" />
+    
+    <TextView
+        android:id="@+id/routeDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/thisRouteName"
+        android:layout_toRightOf="@id/thisRouteTime"
+        android:text="Distance: "
+        android:textSize="11sp"
+        android:textColor="#FFFFFF" />
+    
+    <TextView
+        android:id="@+id/thisRouteDistance"
+        android:paddingBottom="7dp"
+        android:paddingRight="7dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/thisRouteName"
+        android:layout_toRightOf="@id/routeDistance"
+        android:textSize="11sp"
+        android:textColor="#FFFFFF" />
+    
+    <TextView
+        android:id="@+id/routeAvgSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/thisRouteName"
+        android:layout_toRightOf="@id/thisRouteDistance"
+        android:text="Avg Speed: "
+        android:textSize="11sp"
+        android:textColor="#FFFFFF" />
+    
+    <TextView
+        android:id="@+id/thisRouteAvgSpeed"
+        android:paddingBottom="7dp"
+        android:paddingRight="7dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/thisRouteName"
+        android:layout_toRightOf="@id/routeAvgSpeed"
+        android:textSize="11sp"
+        android:textColor="#FFFFFF" />
+  
+
+    <com.google.android.maps.MapView
+        android:id="@+id/routeMapview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/routeTime"
+        android:layout_above="@+id/routeBackButton"
+        android:apiKey="082zAzn08Ezl82dXJlYQnsH57RUVFuvA-xL7AdA"
+        android:clickable="true" />
+
+    <Button
+        android:id="@+id/routeBackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="     Back to the saved trails     " />
+    
+    <Button
+        android:id="@+id/deleteRouteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:text="  Delete  " />
+
+</RelativeLayout>
